@@ -330,7 +330,8 @@ class HumanPlayer:
 def tictactoe():
 
     p1 = Player("computer", exp_rate=0)
-    p1.loadPolicy("policy_p1")
+    # TODO: CHNAGE path either to back-end/RA-L/policy_p1 or front-end/policy_p1 or train a new model 
+    p1.loadPolicy("back-end/RA-L/policy_p1")
 
     p2 = HumanPlayer("human")
 

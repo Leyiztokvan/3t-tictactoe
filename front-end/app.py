@@ -4,11 +4,11 @@ from sqlalchemy import func
 
 # # path of "send_email"-file must be changed to the path on your computer
 import sys
-sys.path.append("C:/Users/Osman Ibrahim/Desktop/TicTacToe - Web-App/back-end") 
+sys.path.append("back-end") 
 from send_email import send_email
 
 
-sys.path.append("C:/Users/Osman Ibrahim/Desktop/TicTacToe - Web-App/back-end/RA-L") 
+sys.path.append("back-end/RA-L") 
 from working_policy import tictactoe
 
 

@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title >Tic Tac Toe</title>
     <link rel="stylesheet" type="text/css"
-      href="{{url_for('static', filename='/styles/grid.css')}}">
+      href="../static/styles/grid.css">
       <script type="text/javascript"
-      src="{{ url_for('static', filename='js/board.js')}}"></script>
+      src="../static/js/board.js"></script>
 
       <link rel="stylesheet" type="text/css"
       href="../static/styles/grid.css">
@@ -21,7 +21,7 @@
             <p class="headline2">Play against AI</p>
         </div>
         <div class="game-container">
-            <form action="{{url_for("board")}}" , method="POST">
+            <form action="board.html" , method="POST">
                 <ul class="game-board x o">
                     <!-- <li class="il"><button class= cell type="submit" name="pos" value="0 0"><img name="imggg" src="{{url_for('static', filename='/assets/img.png')}}"></button></li> -->
                     <!-- <li class="il"><button class= cell type="submit" name="pos" value="0 0"><img class="imggg" name="imggg" src="{{url_for('static', filename='/assets/img.png')}}" onclick="window.open(this.src)"></button></li> -->
@@ -38,7 +38,7 @@
                     <li class="il"><button class= cell type="submit" name="pos" value="2 2" data-cell_index="8"><img src="{{source_8}}"></button></li>
                 </ul>
             </form>
-            <form class="buttons" action="{{url_for("credentials")}}" , method="POST"> 
+            <form class="buttons" action="credentials.html" , method="POST"> 
                 <input  name="replay" type="submit" class="btn" value="Replay"></input>
                 <input name="game_stats" type="submit" class="btn" value="Get Game Stats" ></input>
             </form>
