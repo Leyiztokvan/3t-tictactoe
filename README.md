@@ -2,6 +2,7 @@
 
 Is web application to play TicTacToe online against a reinforcement learning algorithm.
 This is the continuation of a project started during high school. See original project.
+
 **Note**: The original project is not fully functional.
 
 ## Table of Contents
