@@ -1,0 +1,12 @@
+## Following packages are required:
+numpy
+flask
+flask_sqlalchemy
+sqlalchemy
+psycopg2
+email
+smtplib
+pickle
+socket
+itertools
+tkinter
