@@ -1,0 +1,206 @@
+:root{
+    --background-color: black;
+    --cell-background-color: black;
+    --line-color: greenyellow;
+    --text-color: greenyellow;
+    --text-color-dark: black;
+    --message-text-color: red;
+
+
+
+    --container-size: 450px;
+    --cell-size: 150px;
+
+    /* font */
+    --font-family: 'Arcade Interlaced', sans-serif;
+    --button-font-family: 'ArcadeClassic', sans-serif;
+    --messages-font-family: 'Arcade', arial;
+    --font-size-h1: 30px;
+    --font-size-h2: 12px;
+    --font-size-button: 18px;
+    --font-size-input-field: 15px;
+
+    /* images */
+    --x-icon-red-small: url(../assets/x-icon-red-50.png);
+    --x-icon-red: url(../assets/x-icon-red-100.png); 
+
+    --x-icon-small: url(../assets/x-icon-50.png);
+    --o-icon-small: url(../assets/o-icon-50.png); 
+    --x-icon: url(../assets/x-icon-100.png);
+    --o-icon: url(../assets/o-icon-100.png);   
+    --img: url(../assets/img.png);
+    }
+        
+    
+    *>*{
+        font-family: 'Arcade Interlaced', sans-serif;
+        font-size: var(font-size-h2);
+    }
+    
+
+html, body{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--background-color);
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+/* .game-container .headline1 {
+    font-size: var(--font-size-h1);
+    color: var(--text-color);
+    text-align: center;
+} */
+
+.game-container{
+    height: var(--container-size);
+    width: var(--container-size);
+}
+
+/* #game-board{ */
+.game-board{
+    display: grid;
+    grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+    /* column-rule: 4px dashed red; */
+    /* column-gap: 3px; */
+    /* row-gap: 3px;  */
+
+    /* background-color: var(--line-color); */
+
+    /* border: none; */
+}
+
+.cell{
+    height: var(--cell-size);
+    width: var(--cell-size);
+    background-color: var(--cell-background-color);
+    border: 1.5px dashed var(--line-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.game-board.x .cell:not(.x):not(.o):hover{
+    background: var(--x-icon-red-small) no-repeat;
+    background-color: var(--cell-background-color);
+    opacity: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer; 
+}
+
+.game-board.o .cell:not(.o):not(.x):hover{
+    background: var(--o-icon-small) no-repeat;
+    background-color: var(--cell-background-color);
+    opacity: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer; 
+}
+
+.cell.o, .cell.x{
+    cursor: not-allowed;
+}
+
+/* .cell.x{
+    background: var(--x-icon-red-small) no-repeat;
+    background-color: var(--cell-background-color);
+    background-size: cover;
+}
+
+.cell.o{
+    background: var(--o-icon-small) no-repeat;
+    background-color: var(--cell-background-color);
+    background-size: cover;
+} */
+
+/* fills the selected div/cell of game-board with icon */
+.game-container .game-board > div.selected{ 
+    background: var(--o-icon-small) no-repeat;
+    background-color: var(--cell-background-color);
+    background-size: cover;
+}
+
+
+
+.btn {
+    width: 120px;
+    height: 30px;
+    background-color: var(--button-background-color);
+    /* background-color:rgb(211, 104, 68); */
+    color: var(--text-color);
+    margin-top: 15px;
+    border: var(--button-border);
+    box-shadow: 2px 2px 2px 1px var(--box-shadow-color);
+    font-size: 18px;
+    transition: all .2s;
+    border: dashed 1.5px greenyellow;
+}
+/* ........ not implemented yet............. */
+/* game result */
+.draw .headline1 {
+    text-align: center; 
+    color: var(--text-color);
+}
+
+.winner .headline1 {
+    text-align: center; 
+    color: var(--text-color);
+}
+
+.result-window .draw-result .restart-button {
+    width: 220px;
+    height: 30px;
+    background-color: var(--button-background-color);
+    color: var(--text-color);
+    margin-top: 35px;
+    border: var(--button-border);
+    box-shadow: 2px 2px 2px 1px rgba(255, 255, 255, 0.13);
+    font-size: var(--font-size-button);
+    transition: all .2s;
+    font-family: var(--button-font-family)
+}
+
+.draw-result .restart-button, .winner-result .restart-button {
+    width: 220px;
+    height: 30px;
+    background-color: var(--button-background-color);
+    color: var(--text-color);
+    margin-top: 35px;
+    border: var(--button-border);
+    box-shadow: 2px 2px 2px 1px rgba(255, 255, 255, 0.13);
+    font-size: var(--font-size-button);
+    transition: all .2s;
+    font-family: var(--button-font-family)
+}
+
+.draw-result, .winner-result{
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(49, 49, 49, 0.938);
+    opacity: 80%;
+}
+
+.draw-result, .winner-result{
+    display: none;
+}
+
+.draw-result.show, .winner-result.show{
+    display: flex;
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title >Tic Tac Toe</title>
+    <link rel="stylesheet" type="text/css"
+      href="../static/styles/grid.css">
+      <script type="text/javascript"
+      src="../static/js/board.js"></script>
+
+      <link rel="stylesheet" type="text/css"
+      href="../static/styles/grid.css">
+      <!-- <script type="text/javascript"
+      src="../static/js/board.js"></script> -->
+</head>
+<body>
+        <div>
+            <p class="headline1">Tic Tac Toe</p>
+            <p class="headline2">Play against AI</p>
+        </div>
+        <div class="game-container">
+            <form action="board.html" , method="POST">
+                <ul class="game-board x o">
+                    <!-- <li class="il"><button class= cell type="submit" name="pos" value="0 0"><img name="imggg" src="{{url_for('static', filename='/assets/img.png')}}"></button></li> -->
+                    <!-- <li class="il"><button class= cell type="submit" name="pos" value="0 0"><img class="imggg" name="imggg" src="{{url_for('static', filename='/assets/img.png')}}" onclick="window.open(this.src)"></button></li> -->
+                    
+                    <!-- <li class="il"><button class= cell type="submit" name="pos" value="0 0" data-cell_index="0"></button></li> -->
+                    <li class="il"><button class= cell type="submit" name="pos" value="0 0" data-cell_index="0"><img src="{{source_0}}"></button></li>
+                    <li class="il"><button class= cell type="submit" name="pos" value="0 1" data-cell_index="1"><img src="{{source_1}}"></button></li>
+                    <li class="il"><button class= cell type="submit" name="pos" value="0 2" data-cell_index="2"><img src="{{source_2}}"></button></li>
+                    <li class="il"><button class= cell type="submit" name="pos" value="1 0" data-cell_index="3"><img src="{{source_3}}"></button></li>
+                    <li class="il"><button class= cell type="submit" name="pos" value="1 1" data-cell_index="4"><img src="{{source_4}}"></button></li>
+                    <li class="il"><button class= cell type="submit" name="pos" value="1 2" data-cell_index="5"><img src="{{source_5}}"></button></li>
+                    <li class="il"><button class= cell type="submit" name="pos" value="2 0" data-cell_index="6"><img src="{{source_6}}"></button></li>
+                    <li class="il"><button class= cell type="submit" name="pos" value="2 1" data-cell_index="7"><img src="{{source_7}}"></button></li>
+                    <li class="il"><button class= cell type="submit" name="pos" value="2 2" data-cell_index="8"><img src="{{source_8}}"></button></li>
+                </ul>
+            </form>
+            <form class="buttons" action="credentials.html" , method="POST"> 
+                <input  name="replay" type="submit" class="btn" value="Replay"></input>
+                <input name="game_stats" type="submit" class="btn" value="Get Game Stats" ></input>
+            </form>
+        </div>
+</body>
+</html>
